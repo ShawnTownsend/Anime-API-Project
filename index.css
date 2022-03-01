@@ -1,1 +1,21 @@
+body {
+    background-image: url('images/backgrounds/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+#home-page {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15%;
+}
+
+.logos {
+    width: 25%;
+    height: 200px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
