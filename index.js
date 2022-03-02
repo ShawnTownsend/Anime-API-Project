@@ -17,6 +17,13 @@ const char5 = document.getElementById('char5');
 narutoLogo.addEventListener('click', narutoSelect);
 onePieceLogo.addEventListener('click', onePieceSelect);
 dbzLogo.addEventListener('click', dbzSelect);
+narutoLogo.addEventListener('mouseover', enlargeLogo)
+onePieceLogo.addEventListener('mouseover', enlargeLogo)
+dbzLogo.addEventListener('mouseover', enlargeLogo)
+narutoLogo.addEventListener('mouseout', shrinkLogo)
+onePieceLogo.addEventListener('mouseout', shrinkLogo)
+dbzLogo.addEventListener('mouseout', shrinkLogo)
+
 
 /*
 Once logo is clicked, make homepage disappear.
@@ -59,4 +66,14 @@ function dbzSelect() {
     char3.src = `images/sprites/piccolo.png`;
     char4.src = `images/sprites/vegeta.png`;
     char5.src = `images/sprites/beerus.png`;
+}
+
+
+function enlargeLogo(event) {
+    event.target.style.cursor = 'pointer'
+    event.target.style.height = '250px';
+}
+
+function shrinkLogo(event) {
+    event.target.style.height = '200px';
 }
