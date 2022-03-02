@@ -1,8 +1,9 @@
 //FETCH QUOTE
-fetch("https://animechan.vercel.app/api/quotes/character?name=naruto")
-.then(response => response.json())
-.then(data => console.log(data))
+// fetch("https://animechan.vercel.app/api/quotes/character?name=naruto")
+// .then(response => response.json())
+// .then(data => console.log(data))
 
+//VARIABLES
 const dbzLogo = document.getElementById('dbz-logo');
 const onePieceLogo = document.getElementById('one-piece-logo');
 const narutoLogo = document.getElementById('naruto-logo');
@@ -13,10 +14,14 @@ const char2 = document.getElementById('char2');
 const char3 = document.getElementById('char3');
 const char4 = document.getElementById('char4');
 const char5 = document.getElementById('char5');
+const charQuote = document.getElementById("character-quote");
 
+//ANIME SELECT
 narutoLogo.addEventListener('click', narutoSelect);
 onePieceLogo.addEventListener('click', onePieceSelect);
 dbzLogo.addEventListener('click', dbzSelect);
+
+//FOR HOVER EFFECTS
 narutoLogo.addEventListener('mouseover', enlargeLogo)
 onePieceLogo.addEventListener('mouseover', enlargeLogo)
 dbzLogo.addEventListener('mouseover', enlargeLogo)
@@ -24,7 +29,7 @@ narutoLogo.addEventListener('mouseout', shrinkLogo)
 onePieceLogo.addEventListener('mouseout', shrinkLogo)
 dbzLogo.addEventListener('mouseout', shrinkLogo)
 
-
+//ALGO.
 /*
 Once logo is clicked, make homepage disappear.
 Go to character selection page for anime show.
@@ -32,6 +37,7 @@ Add event listeners to each logo.
 Inside event listener: Invoke showCharacter function.
 */
 
+//ANIME SELECTION
 function narutoSelect() {
     document.body.style.backgroundImage = "url('images/backgrounds/naruto-background2.jpg')";
     homePage.style.display = 'none';
@@ -42,6 +48,12 @@ function narutoSelect() {
     char3.src = `images/sprites/sakura2.png`;
     char4.src = `images/sprites/kakashi2.png`;
     char5.src = `images/sprites/shikamaru.png`;
+    
+    char1.alt = "naruto";
+    char2.alt = "sasuke";
+    char3.alt = "sakura";
+    char4.alt = "kakashi";
+    char5.alt = "shikamaru";
 }
 
 function onePieceSelect() {
@@ -54,6 +66,12 @@ function onePieceSelect() {
     char3.src = `images/sprites/nami.png`;
     char4.src = `images/sprites/sanji.png`;
     char5.src = `images/sprites/usopp.png`;
+
+    char1.alt = "luffy";
+    char2.alt = "zoro";
+    char3.alt = "nami";
+    char4.alt = "sanji";
+    char5.alt = "usopp";
 }
 
 function dbzSelect() {
@@ -66,9 +84,15 @@ function dbzSelect() {
     char3.src = `images/sprites/piccolo.png`;
     char4.src = `images/sprites/vegeta.png`;
     char5.src = `images/sprites/beerus.png`;
+
+    char1.alt = "goku";
+    char2.alt = "krillin";
+    char3.alt = "piccolo";
+    char4.alt = "vegeta";
+    char5.alt = "beerus";
 }
 
-
+//HOVER EFFECTS FOR LOGO
 function enlargeLogo(event) {
     event.target.style.cursor = 'pointer'
     event.target.style.height = '250px';
@@ -76,4 +100,30 @@ function enlargeLogo(event) {
 
 function shrinkLogo(event) {
     event.target.style.height = '200px';
+}
+
+/*
+make one function that fetchs quote
+uses string interpolation 
+and checks which character on what show you clicked, and then string interpolates and then calls th function
+{sasuke}
+{naruto page}
+ok now go and fetch this
+function fetchQuote() {
+
+}
+*/
+
+//GET CHARACTER QUOTE
+const arrCharacters = [char1, char2, char3, char4, char5];
+arrCharacters.forEach(char => {
+    char.addEventListener("click", () => {
+        fetchQuote(char.alt);
+    });
+});
+
+function fetchQuote(name) {
+    fetch(`https://animechan.vercel.app/api/quotes/character?name=${name}`)
+    .then(response => response.json())
+    .then(data => console.log(data))
 }
