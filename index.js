@@ -14,7 +14,6 @@ const char2 = document.getElementById('char2');
 const char3 = document.getElementById('char3');
 const char4 = document.getElementById('char4');
 const char5 = document.getElementById('char5');
-const charQuote = document.getElementById("character-quote");
 
 //ANIME SELECT
 narutoLogo.addEventListener('click', narutoSelect);
@@ -115,16 +114,28 @@ function fetchQuote() {
 */
 
 //GET CHARACTER QUOTE
+const characterQuote = document.getElementById('character-quote-page');
+const charImage = document.getElementById('character-quote-image');
+const quotes = document.getElementById('quote');
 const arrCharacters = [char1, char2, char3, char4, char5];
 arrCharacters.forEach(char => {
     char.addEventListener("click", () => {
         charSelect.style.display = 'none';
+        characterQuote.style.display = 'block';
+        charImage.src = char.src;
         fetchQuote(char.alt);
     });
 });
 
+function randomNumber(length) {
+    return Math.floor(Math.random() * length)
+}
+
 function fetchQuote(name) {
     fetch(`https://animechan.vercel.app/api/quotes/character?name=${name}`)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+        quotes.innerText = data[randomNumber(data.length)].quote
+    })
 }
+
