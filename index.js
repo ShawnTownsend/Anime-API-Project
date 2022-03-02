@@ -24,14 +24,6 @@ const narutoCharactersId = [17, 13, 145, 85, 2007];
 const onePieceCharactersId = [40, 62, 61, 305, 724];
 const dbzCharactersId = [264, 2159, 914, 913, 76348];
 
-backToHomeButton.onclick = () => {
-    charSelect.style.display = 'none';
-    document.body.style.height = '';
-    homePage.style.display = 'flex'
-    document.body.style.backgroundImage =
-    "url('images/backgrounds/home-page-background.jpg')";
-}
-
 backToCharactersButton.onclick = () => {
     characterQuote.style.display = 'none';
     charSelect.style.display = 'block';
