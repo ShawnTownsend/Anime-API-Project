@@ -61,15 +61,15 @@ function onePieceSelect() {
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
-    char1.src = `images/sprites/luffy.png`;
-    char2.src = `images/sprites/zoro.png`;
-    char3.src = `images/sprites/nami.png`;
-    char4.src = `images/sprites/sanji.png`;
-    char5.src = `images/sprites/usopp.png`;
+    char1.src = `images/sprites/luffy2.png`;
+    char2.src = `images/sprites/zoro2.png`;
+    char3.src = `images/sprites/nicorobin.png`;
+    char4.src = `images/sprites/sanji2.png`;
+    char5.src = `images/sprites/usopp2.png`;
 
     char1.alt = "luffy";
     char2.alt = "zoro";
-    char3.alt = "nami";
+    char3.alt = "nico";
     char4.alt = "sanji";
     char5.alt = "usopp";
 }
