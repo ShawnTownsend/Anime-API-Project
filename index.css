@@ -1,7 +1,7 @@
 body {
     background-image: url('images/backgrounds/home-page-background.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: inherit;
 }
 
 #home-page {
