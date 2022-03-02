@@ -21,11 +21,21 @@ img {
   height: 100%;
 }
 
-/* #character-selection {
-  height: 100%;
-  width: 20%;
-  display: none;
+#characters-div {
+    float: left;
+    height: 100%;
+    /* margin-bottom: 200px;
+    margin-top: 200px; */
 }
+
+.character {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: solid 1px black;
+}
+
 #characters-div {
   height: 100%;
   width: 100%;
@@ -44,4 +54,4 @@ img {
     height:80%;
     padding-left:30%;
     padding-top: 5%;
-} */
+}
