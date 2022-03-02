@@ -6,8 +6,7 @@ body {
 }
 
 #home-page {
-  /* display: flex; */
-  display: none;
+  display: flex;
   justify-content: space-evenly;
   margin-top: 15%;
 }
@@ -22,9 +21,10 @@ img {
   height: 100%;
 }
 
-#character-selection {
+/* #character-selection {
   height: 100%;
   width: 20%;
+  display: none;
 }
 #characters-div {
   height: 100%;
@@ -44,4 +44,4 @@ img {
     height:80%;
     padding-left:30%;
     padding-top: 5%;
-}
+} */
