@@ -26,7 +26,7 @@ Inside event listener: Invoke showCharacter function.
 */
 
 function narutoSelect() {
-    document.body.style.backgroundImage = "url('images/backgrounds/naruto-background.png')";
+    document.body.style.backgroundImage = "url('images/backgrounds/naruto-background2.jpg')";
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
@@ -50,7 +50,7 @@ function onePieceSelect() {
 }
 
 function dbzSelect() {
-    document.body.style.backgroundImage = "url('images/backgrounds/dbz-background.jpg')";
+    document.body.style.backgroundImage = "url('images/backgrounds/DBZ-background2.png')";
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
