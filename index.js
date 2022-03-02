@@ -4,29 +4,48 @@
 // .then(data => console.log(data))
 
 //VARIABLES
-const dbzLogo = document.getElementById('dbz-logo');
-const onePieceLogo = document.getElementById('one-piece-logo');
-const narutoLogo = document.getElementById('naruto-logo');
-const homePage = document.getElementById('home-page');
-const charSelect = document.getElementById('character-selection');
-const char1 = document.getElementById('char1');
-const char2 = document.getElementById('char2');
-const char3 = document.getElementById('char3');
-const char4 = document.getElementById('char4');
-const char5 = document.getElementById('char5');
+const dbzLogo = document.getElementById("dbz-logo");
+const onePieceLogo = document.getElementById("one-piece-logo");
+const narutoLogo = document.getElementById("naruto-logo");
+const homePage = document.getElementById("home-page");
+const charSelect = document.getElementById("character-selection");
+const char1 = document.getElementById("char1");
+const char2 = document.getElementById("char2");
+const char3 = document.getElementById("char3");
+const char4 = document.getElementById("char4");
+const char5 = document.getElementById("char5");
+const characterQuote = document.getElementById("character-quote-page");
+const charImage = document.getElementById("character-quote-image");
+const quotes = document.getElementById("quote");
+const arrCharacters = [char1, char2, char3, char4, char5];
+const backToHomeButton = document.getElementById("back-to-home");
+const backToCharactersButton = document.getElementById('back-to-characters');
+
+backToHomeButton.onclick = () => {
+    charSelect.style.display = 'none';
+    document.body.style.height = '';
+    homePage.style.display = 'flex'
+    document.body.style.backgroundImage =
+    "url('images/backgrounds/home-page-background.jpg')";
+}
+
+backToCharactersButton.onclick = () => {
+    characterQuote.style.display = 'none';
+    charSelect.style.display = 'block';
+}
 
 //ANIME SELECT
-narutoLogo.addEventListener('click', narutoSelect);
-onePieceLogo.addEventListener('click', onePieceSelect);
-dbzLogo.addEventListener('click', dbzSelect);
+narutoLogo.addEventListener("click", narutoSelect);
+onePieceLogo.addEventListener("click", onePieceSelect);
+dbzLogo.addEventListener("click", dbzSelect);
 
 //FOR HOVER EFFECTS
-narutoLogo.addEventListener('mouseover', enlargeLogo)
-onePieceLogo.addEventListener('mouseover', enlargeLogo)
-dbzLogo.addEventListener('mouseover', enlargeLogo)
-narutoLogo.addEventListener('mouseout', shrinkLogo)
-onePieceLogo.addEventListener('mouseout', shrinkLogo)
-dbzLogo.addEventListener('mouseout', shrinkLogo)
+narutoLogo.addEventListener("mouseover", enlargeLogo);
+onePieceLogo.addEventListener("mouseover", enlargeLogo);
+dbzLogo.addEventListener("mouseover", enlargeLogo);
+narutoLogo.addEventListener("mouseout", shrinkLogo);
+onePieceLogo.addEventListener("mouseout", shrinkLogo);
+dbzLogo.addEventListener("mouseout", shrinkLogo);
 
 //ALGO.
 /*
@@ -35,70 +54,79 @@ Go to character selection page for anime show.
 Add event listeners to each logo.
 Inside event listener: Invoke showCharacter function.
 */
+// For every anime fetched
+// Get id of each character
+// Push id to array
+
+// Fetch user metadata, also fetch the bio
+const characterIdArray = [];
 
 //ANIME SELECTION
 function narutoSelect() {
-    document.body.style.backgroundImage = "url('images/backgrounds/naruto-background2.jpg')";
-    homePage.style.display = 'none';
-    document.body.style.height = '98vh';
-    charSelect.style.display = 'block';
-    char1.src = `images/sprites/naruto2.png`;
-    char2.src = `images/sprites/sasuke2.png`;
-    char3.src = `images/sprites/sakura2.png`;
-    char4.src = `images/sprites/kakashi2.png`;
-    char5.src = `images/sprites/shikamaru.png`;
-    
-    char1.alt = "naruto";
-    char2.alt = "sasuke";
-    char3.alt = "sakura";
-    char4.alt = "kakashi";
-    char5.alt = "shikamaru";
+  document.body.style.backgroundImage =
+    "url('images/backgrounds/naruto-background2.jpg')";
+  homePage.style.display = "none";
+  document.body.style.height = "98vh";
+  charSelect.style.display = "block";
+  char1.src = `images/sprites/naruto2.png`;
+  char2.src = `images/sprites/sasuke2.png`;
+  char3.src = `images/sprites/sakura2.png`;
+  char4.src = `images/sprites/kakashi2.png`;
+  char5.src = `images/sprites/shikamaru.png`;
+  char1.alt = "naruto";
+  char2.alt = "sasuke";
+  char3.alt = "sakura";
+  char4.alt = "kakashi";
+  char5.alt = "shikamaru";
 }
 
 function onePieceSelect() {
-    document.body.style.backgroundImage = "url('images/backgrounds/one-piece-background.png')";
-    homePage.style.display = 'none';
-    document.body.style.height = '98vh';
-    charSelect.style.display = 'block';
-    char1.src = `images/sprites/luffy2.png`;
-    char2.src = `images/sprites/zoro2.png`;
-    char3.src = `images/sprites/nicorobin.png`;
-    char4.src = `images/sprites/sanji2.png`;
-    char5.src = `images/sprites/usopp2.png`;
+  document.body.style.backgroundImage =
+    "url('images/backgrounds/one-piece-background.png')";
+  homePage.style.display = "none";
+  document.body.style.height = "98vh";
+  charSelect.style.display = "block";
+  char1.src = `images/sprites/luffy2.png`;
+  char2.src = `images/sprites/zoro2.png`;
+  char3.src = `images/sprites/nicorobin.png`;
+  char4.src = `images/sprites/sanji2.png`;
+  char5.src = `images/sprites/usopp2.png`;
 
-    char1.alt = "luffy";
-    char2.alt = "zoro";
-    char3.alt = "nico robin";
-    char4.alt = "sanji";
-    char5.alt = "usopp";
+  char1.alt = "luffy";
+  char2.alt = "zoro";
+  char3.alt = "nico robin";
+  char4.alt = "sanji";
+  char5.alt = "usopp";
 }
 
 function dbzSelect() {
-    document.body.style.backgroundImage = "url('images/backgrounds/DBZ-background2.png')";
-    homePage.style.display = 'none';
-    document.body.style.height = '98vh';
-    charSelect.style.display = 'block';
-    char1.src = `images/sprites/goku.png`;
-    char2.src = `images/sprites/krillin.png`;
-    char3.src = `images/sprites/piccolo.png`;
-    char4.src = `images/sprites/vegeta.png`;
-    char5.src = `images/sprites/beerus.png`;
+  document.body.style.backgroundImage =
+    "url('images/backgrounds/DBZ-background2.png')";
+  homePage.style.display = "none";
+  document.body.style.height = "98vh";
+  charSelect.style.display = "block";
+  char1.src = `images/sprites/goku.png`;
+  char2.src = `images/sprites/krillin.png`;
+  char3.src = `images/sprites/piccolo.png`;
+  char4.src = `images/sprites/vegeta.png`;
+  char5.src = `images/sprites/beerus.png`;
 
-    char1.alt = "goku";
-    char2.alt = "krillin";
-    char3.alt = "piccolo";
-    char4.alt = "vegeta";
-    char5.alt = "beerus";
+  char1.alt = "goku";
+  char2.alt = "krillin";
+  char3.alt = "piccolo";
+  char4.alt = "vegeta";
+  char5.alt = "beerus";
 }
+
 
 //HOVER EFFECTS FOR LOGO
 function enlargeLogo(event) {
-    event.target.style.cursor = 'pointer'
-    event.target.style.height = '250px';
+  event.target.style.cursor = "pointer";
+  event.target.style.height = "250px";
 }
 
 function shrinkLogo(event) {
-    event.target.style.height = '200px';
+  event.target.style.height = "200px";
 }
 
 /*
@@ -114,28 +142,24 @@ function fetchQuote() {
 */
 
 //GET CHARACTER QUOTE
-const characterQuote = document.getElementById('character-quote-page');
-const charImage = document.getElementById('character-quote-image');
-const quotes = document.getElementById('quote');
-const arrCharacters = [char1, char2, char3, char4, char5];
-arrCharacters.forEach(char => {
-    char.addEventListener("click", () => {
-        charSelect.style.display = 'none';
-        characterQuote.style.display = 'block';
-        charImage.src = char.src;
-        fetchQuote(char.alt);
-    });
+
+arrCharacters.forEach((char) => {
+  char.addEventListener("click", () => {
+    charSelect.style.display = "none";
+    characterQuote.style.display = "block";
+    charImage.src = char.src;
+    fetchQuote(char.alt);
+  });
 });
 
 function randomNumber(length) {
-    return Math.floor(Math.random() * length)
+  return Math.floor(Math.random() * length);
 }
 
 function fetchQuote(name) {
-    fetch(`https://animechan.vercel.app/api/quotes/character?name=${name}`)
-    .then(response => response.json())
-    .then(data => {
-        quotes.innerText = data[randomNumber(data.length)].quote
-    })
+  fetch(`https://animechan.vercel.app/api/quotes/character?name=${name}`)
+    .then((response) => response.json())
+    .then((data) => {
+      quotes.innerText = data[randomNumber(data.length)].quote;
+    });
 }
-
