@@ -2,7 +2,7 @@ body {
   background-image: url("images/backgrounds/home-page-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 98vh;
+  /* height: 98vh; */
 }
 
 #home-page {
@@ -21,21 +21,11 @@ img {
   height: 100%;
 }
 
-#characters-div {
-    float: left;
-    height: 100%;
-    /* margin-bottom: 200px;
-    margin-top: 200px; */
+#character-selection {
+  height: 100%;
+  width: 20%;
+  display:none;
 }
-
-.character {
-    margin-bottom: 100px;
-    margin-top: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
-    border: solid 1px black;
-}
-
 #characters-div {
   height: 100%;
   width: 100%;
