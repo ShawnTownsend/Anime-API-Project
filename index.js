@@ -118,6 +118,7 @@ function fetchQuote() {
 const arrCharacters = [char1, char2, char3, char4, char5];
 arrCharacters.forEach(char => {
     char.addEventListener("click", () => {
+        charSelect.style.display = 'none';
         fetchQuote(char.alt);
     });
 });
