@@ -1,38 +1,47 @@
 body {
-    background-image: url('images/backgrounds/home-page-background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 98vh;
+  background-image: url("images/backgrounds/home-page-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 98vh;
 }
 
 #home-page {
-    /* display: flex; */
-    display: none;
-    justify-content: space-evenly;
-    margin-top: 15%;
+  /* display: flex; */
+  display: none;
+  justify-content: space-evenly;
+  margin-top: 15%;
 }
 
 .logos {
-    width: 25%;
-    height: 200px;
+  width: 25%;
+  height: 200px;
 }
 
 img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #character-selection {
-    height:100%;
-    width:20%;
+  height: 100%;
+  width: 20%;
 }
 #characters-div {
-    height:100%;
-    width:100%;
+  height: 100%;
+  width: 100%;
 }
 .character {
-    width:30%;
-    height:20%;
-    border:1px solid black;
-    border-radius: 20%;
+  width: 100%;
+  height: 18%;
+  margin:auto;
+  background-color: rgb(224, 233, 190);
+  border-radius: 50%;
+  margin: 3% 0 0 15%;
+}
+
+.character img {
+    width:35%;
+    height:80%;
+    padding-left:30%;
+    padding-top: 5%;
 }
