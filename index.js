@@ -69,7 +69,7 @@ function onePieceSelect() {
 
     char1.alt = "luffy";
     char2.alt = "zoro";
-    char3.alt = "nico";
+    char3.alt = "nico robin";
     char4.alt = "sanji";
     char5.alt = "usopp";
 }
