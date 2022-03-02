@@ -42,15 +42,15 @@ function narutoSelect() {
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
-    char1.src = `images/sprites/naruto2.png`;
-    char2.src = `images/sprites/sasuke2.png`;
-    char3.src = `images/sprites/neji.png`;
-    char4.src = `images/sprites/kakashi2.png`;
-    char5.src = `images/sprites/shikamaru.png`;
+    char1.src = `images/sprites/naruto.png`;
+    char2.src = `images/sprites/sasuke.png`;
+    char3.src = `images/sprites/sakura.png`;
+    char4.src = `images/sprites/kakashi.png`;
+    char5.src = `images/sprites/shikamaru2.png`;
     
     char1.alt = "naruto";
     char2.alt = "sasuke";
-    char3.alt = "neji hyuuga";
+    char3.alt = "haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
 }
