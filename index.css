@@ -23,26 +23,6 @@ img {
 }
 
 #character-selection {
-<<<<<<< HEAD
-    /* margin-bottom: 200px;
-    margin-top: 200px; */
-}
-
-#characters-div {
-    float: left;
-    height: 100%;
-    /* margin-bottom: 200px;
-    margin-top: 200px; */
-}
-
-.character {
-    margin-bottom: 100px;
-    margin-top: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
-    border: solid 1px black;
-}
-=======
   height: 100%;
   width: 20%;
 }
@@ -65,4 +45,3 @@ img {
     padding-left:30%;
     padding-top: 5%;
 }
->>>>>>> 1c97ea53fb9fe0f4c8df62921031177d4fa2902a
