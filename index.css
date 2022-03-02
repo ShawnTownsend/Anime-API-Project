@@ -2,6 +2,7 @@ body {
     background-image: url('images/backgrounds/home-page-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    /* height: 100vh; */
 }
 
 #home-page {
@@ -18,5 +19,11 @@ body {
 
 img {
     width: 100%;
+    height: 100%;
+}
+
+#characters-div {
+    border: solid 1px black;
+    float: left;
     height: 100%;
 }
