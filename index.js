@@ -49,6 +49,7 @@ function narutoSelect() {
     document.body.style.backgroundImage = "url('images/backgrounds/naruto-background-pixteller.png')";
     previousBackground = "url('images/backgrounds/naruto-background-pixteller.png')";
     homePage.style.display = 'none';
+    document.querySelector("header").style.display = "none";
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
     char1.src = `images/sprites/naruto-icon.png`;
@@ -76,6 +77,7 @@ function onePieceSelect() {
     "url('images/backgrounds/one-piece-background.png')";
   previousBackground = "url('images/backgrounds/one-piece-background.png')";
   homePage.style.display = "none";
+  document.querySelector("header").style.display = "none";
   document.body.style.height = "98vh";
   charSelect.style.display = "block";
   char1.src = `images/sprites/luffy.png`;
@@ -103,6 +105,7 @@ function dbzSelect() {
     "url('images/backgrounds/DBZ-background2.png')";
   previousBackground = "url('images/backgrounds/DBZ-background2.png')";
   homePage.style.display = "none";
+  document.querySelector("header").style.display = "none";
   document.body.style.height = "98vh";
   charSelect.style.display = "block";
   char1.src = `images/sprites/goku-icon.png`;
