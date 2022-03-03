@@ -66,11 +66,11 @@ function narutoSelect() {
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
-    char1.src = `images/sprites/naruto.png`;
-    char2.src = `images/sprites/sasuke.png`;
-    char3.src = `images/sprites/sakura.png`;
-    char4.src = `images/sprites/kakashi.png`;
-    char5.src = `images/sprites/shikamaru.png`;
+    char1.src = `images/sprites/naruto-icon.png`;
+    char2.src = `images/sprites/sasuke-icon.png`;
+    char3.src = `images/sprites/sakura-icon.png`;
+    char4.src = `images/sprites/kakashi-icon.png`;
+    char5.src = `images/sprites/shikamaru-icon.png`;
     
     char1.alt = "naruto";
     char2.alt = "sasuke";
@@ -119,9 +119,9 @@ function dbzSelect() {
   document.body.style.height = "98vh";
   charSelect.style.display = "block";
   char1.src = `images/sprites/goku.png`;
-  char2.src = `images/sprites/krillin.png`;
+  char2.src = `images/sprites/krillin-icon.png`;
   char3.src = `images/sprites/piccolo.png`;
-  char4.src = `images/sprites/vegeta.png`;
+  char4.src = `images/sprites/vegeta-icon.png`;
   char5.src = `images/sprites/beerus.png`;
 
   char1.alt = "goku";
