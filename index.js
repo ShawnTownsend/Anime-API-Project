@@ -77,7 +77,7 @@ function narutoSelect() {
     char3.alt = "sakura haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
-    narutoAudio.volume = 0.75;
+    narutoAudio.volume = 0.60;
     narutoAudio.play();
     narutoAudio.addEventListener('ended', function() {
       narutoAudio.currentTime = 0;
