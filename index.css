@@ -16,7 +16,7 @@ body {
 }
 
 #logo-img {
-  -webkit-filter: drop-shadow(4px 4px 4px rgba(221, 30, 71, 0.5));
+  filter: drop-shadow(4px 4px 4px rgba(221, 30, 71, 0.5));
 }
 
 img {
