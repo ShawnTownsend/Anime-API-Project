@@ -151,6 +151,11 @@ a.button:hover {
   color:rgb(189, 4, 143);
 }
 
+#choose-anime-div {
+  position: absolute;
+  top: 500px;
+}
+
 footer {
   background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgb(224, 13, 115));
   position:absolute;
