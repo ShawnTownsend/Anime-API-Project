@@ -63,23 +63,6 @@ const characterIdArray = [];
 
 //ANIME SELECTION
 function narutoSelect() {
-<<<<<<< HEAD
-  document.body.style.backgroundImage =
-    "url('images/backgrounds/naruto-background2.jpg')";
-  homePage.style.display = "none";
-  document.body.style.height = "98vh";
-  charSelect.style.display = "block";
-  char1.src = `images/sprites/naruto2.png`;
-  char2.src = `images/sprites/sasuke2.png`;
-  char3.src = `images/sprites/sakura2.png`;
-  char4.src = `images/sprites/kakashi2.png`;
-  char5.src = `images/sprites/shikamaru.png`;
-  char1.alt = "naruto";
-  char2.alt = "sasuke";
-  char3.alt = "sakura";
-  char4.alt = "kakashi";
-  char5.alt = "shikamaru";
-=======
     document.body.style.backgroundImage = "url('images/backgrounds/naruto-background2.jpg')";
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
@@ -95,7 +78,6 @@ function narutoSelect() {
     char3.alt = "haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
->>>>>>> 9dd6611a097a06453341042192a6f5672e504f1d
 }
 
 function onePieceSelect() {
