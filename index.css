@@ -150,3 +150,12 @@ a.button:hover {
 #link {
   color:rgb(189, 4, 143);
 }
+
+footer {
+  background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgb(224, 13, 115));
+  position:absolute;
+  bottom:0;
+  left: 0;
+  width:100%;
+  color: white;
+}
