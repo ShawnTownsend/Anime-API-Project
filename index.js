@@ -24,6 +24,9 @@ const narutoCharactersId = [17, 13, 145, 85, 2007];
 const onePieceCharactersId = [40, 62, 61, 305, 724];
 const dbzCharactersId = [264, 2159, 914, 913, 76348];
 let currentAnime;
+const dbzAudio = new Audio('audio/DBZ-Theme.mp3');
+const narutoAudio = new Audio('audio/Naruto-Theme.mp3');
+const onePieceAudio = new Audio('audio/One-Piece-LuffysTheme.mp3');
 
 
 backToCharactersButton.onclick = () => {
@@ -74,6 +77,12 @@ function narutoSelect() {
     char3.alt = "sakura haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
+    narutoAudio.volume = 0.75;
+    narutoAudio.play();
+    narutoAudio.addEventListener('ended', function() {
+      narutoAudio.currentTime = 0;
+      narutoAudio.play();
+    }, false);
     currentAnime = 'Naruto'
 }
 
@@ -94,6 +103,12 @@ function onePieceSelect() {
   char3.alt = "nico robin";
   char4.alt = "sanji";
   char5.alt = "usopp";
+  onePieceAudio.volume = 0.75;
+  onePieceAudio.play();
+  onePieceAudio.addEventListener('ended', function() {
+    onePieceAudio.currentTime = 0;
+    onePieceAudio.play();
+  }, false);
   currentAnime = 'One Piece'
 }
 
@@ -114,6 +129,12 @@ function dbzSelect() {
   char3.alt = "piccolo";
   char4.alt = "vegeta";
   char5.alt = "beerus";
+  dbzAudio.volume = 0.75;
+  dbzAudio.play();
+  dbzAudio.addEventListener('ended', function() {
+    dbzAudio.currentTime = 0;
+    dbzAudio.play();
+  }, false);
   currentAnime = 'Dragon Ball Z'
 }
 
