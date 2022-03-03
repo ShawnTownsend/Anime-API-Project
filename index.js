@@ -166,7 +166,6 @@ function fetchQuote(name) {
     .then((response) => response.json())
     .then((data) => {
       quotes.innerText = data[randomNumber(data.length)].quote;
-      console.log(data)
     });
 }
 
