@@ -71,7 +71,7 @@ function narutoSelect() {
     
     char1.alt = "naruto";
     char2.alt = "sasuke";
-    char3.alt = "haruno";
+    char3.alt = "sakura haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
 }
@@ -166,6 +166,7 @@ function fetchQuote(name) {
     .then((response) => response.json())
     .then((data) => {
       quotes.innerText = data[randomNumber(data.length)].quote;
+      console.log(data)
     });
 }
 
