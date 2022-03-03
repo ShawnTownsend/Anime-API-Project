@@ -22,11 +22,13 @@ let currentAnime;
 const dbzAudio = new Audio('audio/DBZ-Theme.mp3');
 const narutoAudio = new Audio('audio/Naruto-Theme.mp3');
 const onePieceAudio = new Audio('audio/One-Piece-LuffysTheme.mp3');
+let previousBackground;
 
 
 backToCharactersButton.onclick = () => {
   characterQuote.style.display = 'none';
   charSelect.style.display = 'block';
+  document.body.style.backgroundImage = previousBackground;
 }
 
 //ANIME SELECT
@@ -45,6 +47,7 @@ dbzLogo.addEventListener("mouseout", shrinkLogo);
 //ANIME SELECTION
 function narutoSelect() {
     document.body.style.backgroundImage = "url('images/backgrounds/naruto-background-pixteller.png')";
+    previousBackground = "url('images/backgrounds/naruto-background-pixteller.png')";
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
@@ -59,7 +62,7 @@ function narutoSelect() {
     char3.alt = "sakura haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
-    narutoAudio.volume = 0.20;
+    narutoAudio.volume = 0.15;
     narutoAudio.play();
     narutoAudio.addEventListener('ended', function() {
       narutoAudio.currentTime = 0;
@@ -71,6 +74,7 @@ function narutoSelect() {
 function onePieceSelect() {
   document.body.style.backgroundImage =
     "url('images/backgrounds/one-piece-background.png')";
+  previousBackground = "url('images/backgrounds/one-piece-background.png')";
   homePage.style.display = "none";
   document.body.style.height = "98vh";
   charSelect.style.display = "block";
@@ -85,7 +89,7 @@ function onePieceSelect() {
   char3.alt = "nico robin";
   char4.alt = "sanji";
   char5.alt = "usopp";
-  onePieceAudio.volume = 0.20;
+  onePieceAudio.volume = 0.15;
   onePieceAudio.play();
   onePieceAudio.addEventListener('ended', function() {
     onePieceAudio.currentTime = 0;
@@ -97,6 +101,7 @@ function onePieceSelect() {
 function dbzSelect() {
   document.body.style.backgroundImage =
     "url('images/backgrounds/DBZ-background2.png')";
+  previousBackground = "url('images/backgrounds/DBZ-background2.png')";
   homePage.style.display = "none";
   document.body.style.height = "98vh";
   charSelect.style.display = "block";
@@ -111,7 +116,7 @@ function dbzSelect() {
   char3.alt = "piccolo";
   char4.alt = "vegeta";
   char5.alt = "beerus";
-  dbzAudio.volume = 0.20;
+  dbzAudio.volume = 0.15;
   dbzAudio.play();
   dbzAudio.addEventListener('ended', function() {
     dbzAudio.currentTime = 0;
@@ -136,7 +141,6 @@ arrCharacters.forEach((char,index) => {
   char.addEventListener("click", () => {
     charSelect.style.display = "none";
     characterQuote.style.display = "block";
-    fetchQuote(char.alt);
     if (currentAnime === 'Naruto') {
       fetchMetaData(index, narutoCharactersId, char.alt);
     } else if (currentAnime === 'Dragon Ball Z') {
@@ -144,6 +148,9 @@ arrCharacters.forEach((char,index) => {
     } else {
       fetchMetaData(index, onePieceCharactersId, char.alt);
     }
+      document.body.style.backgroundImage =
+    `url('images/character-backgrounds/${char.alt}.png')`;
+    fetchQuote(char.alt);
   });
 });
 
