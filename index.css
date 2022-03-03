@@ -71,6 +71,7 @@ img {
 #quote-div {
   width:70%;
   height:45%;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
 }
 
 a.button {
