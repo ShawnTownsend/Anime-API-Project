@@ -67,7 +67,7 @@ function narutoSelect() {
     char2.src = `images/sprites/sasuke.png`;
     char3.src = `images/sprites/sakura.png`;
     char4.src = `images/sprites/kakashi.png`;
-    char5.src = `images/sprites/shikamaru2.png`;
+    char5.src = `images/sprites/shikamaru.png`;
     
     char1.alt = "naruto";
     char2.alt = "sasuke";
@@ -83,11 +83,11 @@ function onePieceSelect() {
   homePage.style.display = "none";
   document.body.style.height = "98vh";
   charSelect.style.display = "block";
-  char1.src = `images/sprites/luffy2.png`;
-  char2.src = `images/sprites/zoro2.png`;
+  char1.src = `images/sprites/luffy.png`;
+  char2.src = `images/sprites/zoro.png`;
   char3.src = `images/sprites/nicorobin.png`;
-  char4.src = `images/sprites/sanji2.png`;
-  char5.src = `images/sprites/usopp2.png`;
+  char4.src = `images/sprites/sanji.png`;
+  char5.src = `images/sprites/usopp.png`;
 
   char1.alt = "luffy";
   char2.alt = "zoro";
