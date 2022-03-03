@@ -161,7 +161,7 @@ function fetchQuote(name) {
 const charName = document.getElementById('name')
 const charKanjiName = document.getElementById('name_kanji')
 const charNickName = document.getElementById('nickname')
-
+const charURL = document.getElementById("link");
 
 function fetchMetaData(index, array, name) {
   fetch(`https://api.jikan.moe/v4/characters/${array[index]}`)
@@ -169,8 +169,12 @@ function fetchMetaData(index, array, name) {
   .then(data => {
     charName.innerText = `Name: ${data.data.name}`
     charKanjiName.innerText = `Kanji: ${data.data.name_kanji}`
-    charNickName.innerText = `Nickname: ${data.data.nicknames[0]}`
+    if(data.data.nicknames[0] !== undefined) {
+      charNickName.innerText = `Nickname: ${data.data.nicknames[0]}`
+    }
     charImage.src = data.data.images.jpg.image_url;
+    charURL.href = data.data.url;
+    charURL.innerText = `Read more about ${data.data.name}`
   })
 }
 

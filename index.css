@@ -68,13 +68,19 @@ img {
   width:30%;
   height:100%;
 }
-#character-image-div {
+.character-image-div {
   width:100%;
   height:50%;
 }
+
+.character-data {
+  width: 200%;
+}
+
 #quote-div {
   width:70%;
   height:45%;
+  /* margin-left: ; */
 }
 
 #quote {
