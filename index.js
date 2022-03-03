@@ -74,6 +74,7 @@ function narutoSelect() {
     char3.alt = "sakura haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
+    currentAnime = 'Naruto'
 }
 
 function onePieceSelect() {
