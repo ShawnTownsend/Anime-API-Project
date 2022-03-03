@@ -1,8 +1,3 @@
-//FETCH QUOTE
-// fetch("https://animechan.vercel.app/api/quotes/character?name=naruto")
-// .then(response => response.json())
-// .then(data => console.log(data))
-
 //VARIABLES
 const dbzLogo = document.getElementById("dbz-logo");
 const onePieceLogo = document.getElementById("one-piece-logo");
@@ -30,8 +25,8 @@ const onePieceAudio = new Audio('audio/One-Piece-LuffysTheme.mp3');
 
 
 backToCharactersButton.onclick = () => {
-    characterQuote.style.display = 'none';
-    charSelect.style.display = 'block';
+  characterQuote.style.display = 'none';
+  charSelect.style.display = 'block';
 }
 
 //ANIME SELECT
@@ -46,19 +41,6 @@ dbzLogo.addEventListener("mouseover", enlargeLogo);
 narutoLogo.addEventListener("mouseout", shrinkLogo);
 onePieceLogo.addEventListener("mouseout", shrinkLogo);
 dbzLogo.addEventListener("mouseout", shrinkLogo);
-
-//ALGO.
-/*
-Once logo is clicked, make homepage disappear.
-Go to character selection page for anime show.
-Add event listeners to each logo.
-Inside event listener: Invoke showCharacter function.
-*/
-// For every anime fetched
-// Get id of each character
-// Push id to array
-
-// Fetch user metadata, also fetch the bio
 
 //ANIME SELECTION
 function narutoSelect() {
@@ -138,7 +120,6 @@ function dbzSelect() {
   currentAnime = 'Dragon Ball Z'
 }
 
-
 //HOVER EFFECTS FOR LOGO
 function enlargeLogo(event) {
   event.target.style.cursor = "pointer";
@@ -148,18 +129,6 @@ function enlargeLogo(event) {
 function shrinkLogo(event) {
   event.target.style.height = "200px";
 }
-
-/*
-make one function that fetchs quote
-uses string interpolation 
-and checks which character on what show you clicked, and then string interpolates and then calls th function
-{sasuke}
-{naruto page}
-ok now go and fetch this
-function fetchQuote() {
-
-}
-*/
 
 //GET CHARACTER QUOTE
 
