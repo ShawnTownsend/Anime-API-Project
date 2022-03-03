@@ -118,7 +118,7 @@ function dbzSelect() {
   homePage.style.display = "none";
   document.body.style.height = "98vh";
   charSelect.style.display = "block";
-  char1.src = `images/sprites/goku.png`;
+  char1.src = `images/sprites/goku-icon.png`;
   char2.src = `images/sprites/krillin-icon.png`;
   char3.src = `images/sprites/piccolo.png`;
   char4.src = `images/sprites/vegeta-icon.png`;
