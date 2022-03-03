@@ -17,7 +17,7 @@ const backToHomeButton = document.getElementById("back-to-home");
 const backToCharactersButton = document.getElementById('back-to-characters');
 const narutoCharactersId = [17, 13, 145, 85, 2007];
 const onePieceCharactersId = [40, 62, 61, 305, 724];
-const dbzCharactersId = [264, 2159, 914, 913, 76348];
+const dbzCharactersId = [246, 2159, 914, 913, 76348];
 let currentAnime;
 const dbzAudio = new Audio('audio/DBZ-Theme.mp3');
 const narutoAudio = new Audio('audio/Naruto-Theme.mp3');
@@ -136,7 +136,6 @@ arrCharacters.forEach((char,index) => {
   char.addEventListener("click", () => {
     charSelect.style.display = "none";
     characterQuote.style.display = "block";
-    charImage.src = char.src;
     fetchQuote(char.alt);
     if (currentAnime === 'Naruto') {
       fetchMetaData(index, narutoCharactersId, char.alt);
@@ -159,19 +158,19 @@ function fetchQuote(name) {
       quotes.innerText = data[randomNumber(data.length)].quote;
     });
 }
+const charName = document.getElementById('name')
+const charKanjiName = document.getElementById('name_kanji')
+const charNickName = document.getElementById('nickname')
+
 
 function fetchMetaData(index, array, name) {
   fetch(`https://api.jikan.moe/v4/characters/${array[index]}`)
   .then(response => response.json())
   .then(data => {
-    const about = data.data.about.split(`\n`);
-    about.length = 8;
-    about.join('\n')
-    document.getElementById('about').innerText = about;
-    document.getElementById('link').href = data.data.url;
-    document.getElementById('link').innerText = `Read more about ${name}`
-    document.getElementById('name').innerText = name[0].toUpperCase() + name.substring(1);
-    document.getElementById('anime').innerText = currentAnime;
+    charName.innerText = `Name: ${data.data.name}`
+    charKanjiName.innerText = `Kanji: ${data.data.name_kanji}`
+    charNickName.innerText = `Nickname: ${data.data.nicknames[0]}`
+    charImage.src = data.data.images.jpg.image_url;
   })
 }
 
