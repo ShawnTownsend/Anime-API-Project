@@ -59,7 +59,7 @@ Inside event listener: Invoke showCharacter function.
 
 //ANIME SELECTION
 function narutoSelect() {
-    document.body.style.backgroundImage = "url('images/backgrounds/naruto-background3.jpeg')";
+    document.body.style.backgroundImage = "url('images/backgrounds/naruto-background-pixteller.png')";
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
     charSelect.style.display = 'block';
