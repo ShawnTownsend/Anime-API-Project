@@ -120,9 +120,9 @@ function dbzSelect() {
   charSelect.style.display = "block";
   char1.src = `images/sprites/goku-icon.png`;
   char2.src = `images/sprites/krillin-icon.png`;
-  char3.src = `images/sprites/piccolo.png`;
+  char3.src = `images/sprites/piccolo3.png`;
   char4.src = `images/sprites/vegeta-icon.png`;
-  char5.src = `images/sprites/beerus.png`;
+  char5.src = `images/sprites/beerus1.png`;
 
   char1.alt = "goku";
   char2.alt = "krillin";
