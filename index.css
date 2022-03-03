@@ -71,6 +71,8 @@ img {
 .character-image-div {
   width:100%;
   height:50%;
+  background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgba(240, 166, 202, 1));
+  box-shadow: 0px 0px 3px 5px #f2e1f2; 
 }
 
 .character-data {
@@ -80,18 +82,17 @@ img {
 #quote-div {
   width:70%;
   height:45%;
-  /* margin-left: ; */
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  right: 20px;
 }
 
 #quote {
   background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgba(240, 166, 202, 1));
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
-  /* background-color: rgba(0, 0, 0, 0.2); */
   color: white;
-
-  -webkit-box-shadow: 0px 0px 3px 5px #f2e1f2;
-  -moz-box-shadow: 0px 0px 3px 5px #f2e1f2;
-  box-shadow: 0px 0px 3px 5px #f2e1f2; 
+  padding: 10px 10px 10px;
+  box-shadow: 0px 0px 3px 5px #302e2e; 
 }
 
 a.button {
@@ -144,4 +145,8 @@ a.button:hover {
 
 #back-to-characters.button:hover {
     opacity: 1
+}
+
+#link {
+  color:rgb(189, 4, 143);
 }
