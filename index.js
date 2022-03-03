@@ -59,23 +59,6 @@ Inside event listener: Invoke showCharacter function.
 
 //ANIME SELECTION
 function narutoSelect() {
-<<<<<<< HEAD
-    document.body.style.backgroundImage = "url('images/backgrounds/naruto-background2.jpg')";
-    homePage.style.display = 'none';
-    document.body.style.height = '98vh';
-    charSelect.style.display = 'block';
-    char1.src = `images/sprites/naruto.png`;
-    char2.src = `images/sprites/sasuke.png`;
-    char3.src = `images/sprites/sakura.png`;
-    char4.src = `images/sprites/kakashi.png`;
-    char5.src = `images/sprites/shikamaru2.png`;
-    
-    char1.alt = "naruto";
-    char2.alt = "sasuke";
-    char3.alt = "haruno";
-    char4.alt = "kakashi";
-    char5.alt = "shikamaru";
-=======
   document.body.style.backgroundImage =
     "url('images/backgrounds/naruto-background2.jpg')";
   homePage.style.display = "none";
@@ -92,7 +75,6 @@ function narutoSelect() {
   char4.alt = "kakashi";
   char5.alt = "shikamaru";
   currentAnime = 'Naruto'
->>>>>>> 0b88960d46bef929b01e420b324a9e8f584830a7
 }
 
 function onePieceSelect() {
