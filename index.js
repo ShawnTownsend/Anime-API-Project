@@ -23,6 +23,8 @@ const backToCharactersButton = document.getElementById('back-to-characters');
 const narutoCharactersId = [17, 13, 145, 85, 2007];
 const onePieceCharactersId = [40, 62, 61, 305, 724];
 const dbzCharactersId = [264, 2159, 914, 913, 76348];
+let currentAnime;
+
 
 backToCharactersButton.onclick = () => {
     characterQuote.style.display = 'none';
@@ -72,6 +74,7 @@ function narutoSelect() {
   char3.alt = "haruno";
   char4.alt = "kakashi";
   char5.alt = "shikamaru";
+  currentAnime = 'Naruto'
 }
 
 function onePieceSelect() {
@@ -91,6 +94,7 @@ function onePieceSelect() {
   char3.alt = "nico robin";
   char4.alt = "sanji";
   char5.alt = "usopp";
+  currentAnime = 'One Piece'
 }
 
 function dbzSelect() {
@@ -110,6 +114,7 @@ function dbzSelect() {
   char3.alt = "piccolo";
   char4.alt = "vegeta";
   char5.alt = "beerus";
+  currentAnime = 'Dragon Ball Z'
 }
 
 
@@ -137,12 +142,19 @@ function fetchQuote() {
 
 //GET CHARACTER QUOTE
 
-arrCharacters.forEach((char) => {
+arrCharacters.forEach((char,index) => {
   char.addEventListener("click", () => {
     charSelect.style.display = "none";
     characterQuote.style.display = "block";
     charImage.src = char.src;
     fetchQuote(char.alt);
+    if (currentAnime === 'Naruto') {
+      fetchMetaData(index, narutoCharactersId, char.alt);
+    } else if (currentAnime === 'Dragon Ball Z') {
+      fetchMetaData(index, dbzCharactersId, char.alt);
+    } else {
+      fetchMetaData(index, onePieceCharactersId, char.alt);
+    }
   });
 });
 
@@ -158,4 +170,18 @@ function fetchQuote(name) {
     });
 }
 
+function fetchMetaData(index, array, name) {
+  fetch(`https://api.jikan.moe/v4/characters/${array[index]}`)
+  .then(response => response.json())
+  .then(data => {
+    const about = data.data.about.split(`\n`);
+    about.length = 8;
+    about.join('\n')
+    document.getElementById('about').innerText = about;
+    document.getElementById('link').href = data.data.url;
+    document.getElementById('link').innerText = `Read more about ${name}`
+    document.getElementById('name').innerText = name[0].toUpperCase() + name.substring(1);
+    document.getElementById('anime').innerText = currentAnime;
+  })
+}
 
