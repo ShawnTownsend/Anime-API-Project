@@ -20,14 +20,11 @@ const quotes = document.getElementById("quote");
 const arrCharacters = [char1, char2, char3, char4, char5];
 const backToHomeButton = document.getElementById("back-to-home");
 const backToCharactersButton = document.getElementById('back-to-characters');
+const narutoCharactersId = [17, 13, 145, 85, 2007];
+const onePieceCharactersId = [40, 62, 61, 305, 724];
+const dbzCharactersId = [264, 2159, 914, 913, 76348];
+let currentAnime;
 
-backToHomeButton.onclick = () => {
-    charSelect.style.display = 'none';
-    document.body.style.height = '';
-    homePage.style.display = 'flex'
-    document.body.style.backgroundImage =
-    "url('images/backgrounds/home-page-background.jpg')";
-}
 
 backToCharactersButton.onclick = () => {
     characterQuote.style.display = 'none';
@@ -59,10 +56,10 @@ Inside event listener: Invoke showCharacter function.
 // Push id to array
 
 // Fetch user metadata, also fetch the bio
-const characterIdArray = [];
 
 //ANIME SELECTION
 function narutoSelect() {
+<<<<<<< HEAD
     document.body.style.backgroundImage = "url('images/backgrounds/naruto-background2.jpg')";
     homePage.style.display = 'none';
     document.body.style.height = '98vh';
@@ -78,6 +75,24 @@ function narutoSelect() {
     char3.alt = "haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
+=======
+  document.body.style.backgroundImage =
+    "url('images/backgrounds/naruto-background2.jpg')";
+  homePage.style.display = "none";
+  document.body.style.height = "98vh";
+  charSelect.style.display = "block";
+  char1.src = `images/sprites/naruto.png`;
+  char2.src = `images/sprites/sasuke.png`;
+  char3.src = `images/sprites/sakura.png`;
+  char4.src = `images/sprites/kakashi.png`;
+  char5.src = `images/sprites/shikamaru2.png`;
+  char1.alt = "naruto";
+  char2.alt = "sasuke";
+  char3.alt = "haruno";
+  char4.alt = "kakashi";
+  char5.alt = "shikamaru";
+  currentAnime = 'Naruto'
+>>>>>>> 0b88960d46bef929b01e420b324a9e8f584830a7
 }
 
 function onePieceSelect() {
@@ -97,6 +112,7 @@ function onePieceSelect() {
   char3.alt = "nico robin";
   char4.alt = "sanji";
   char5.alt = "usopp";
+  currentAnime = 'One Piece'
 }
 
 function dbzSelect() {
@@ -116,6 +132,7 @@ function dbzSelect() {
   char3.alt = "piccolo";
   char4.alt = "vegeta";
   char5.alt = "beerus";
+  currentAnime = 'Dragon Ball Z'
 }
 
 
@@ -143,12 +160,19 @@ function fetchQuote() {
 
 //GET CHARACTER QUOTE
 
-arrCharacters.forEach((char) => {
+arrCharacters.forEach((char,index) => {
   char.addEventListener("click", () => {
     charSelect.style.display = "none";
     characterQuote.style.display = "block";
     charImage.src = char.src;
     fetchQuote(char.alt);
+    if (currentAnime === 'Naruto') {
+      fetchMetaData(index, narutoCharactersId, char.alt);
+    } else if (currentAnime === 'Dragon Ball Z') {
+      fetchMetaData(index, dbzCharactersId, char.alt);
+    } else {
+      fetchMetaData(index, onePieceCharactersId, char.alt);
+    }
   });
 });
 
@@ -163,3 +187,19 @@ function fetchQuote(name) {
       quotes.innerText = data[randomNumber(data.length)].quote;
     });
 }
+
+function fetchMetaData(index, array, name) {
+  fetch(`https://api.jikan.moe/v4/characters/${array[index]}`)
+  .then(response => response.json())
+  .then(data => {
+    const about = data.data.about.split(`\n`);
+    about.length = 8;
+    about.join('\n')
+    document.getElementById('about').innerText = about;
+    document.getElementById('link').href = data.data.url;
+    document.getElementById('link').innerText = `Read more about ${name}`
+    document.getElementById('name').innerText = name[0].toUpperCase() + name.substring(1);
+    document.getElementById('anime').innerText = currentAnime;
+  })
+}
+
