@@ -77,7 +77,7 @@ function narutoSelect() {
     char3.alt = "sakura haruno";
     char4.alt = "kakashi";
     char5.alt = "shikamaru";
-    narutoAudio.volume = 0.60;
+    narutoAudio.volume = 0.40;
     narutoAudio.play();
     narutoAudio.addEventListener('ended', function() {
       narutoAudio.currentTime = 0;
@@ -103,7 +103,7 @@ function onePieceSelect() {
   char3.alt = "nico robin";
   char4.alt = "sanji";
   char5.alt = "usopp";
-  onePieceAudio.volume = 0.75;
+  onePieceAudio.volume = 0.40;
   onePieceAudio.play();
   onePieceAudio.addEventListener('ended', function() {
     onePieceAudio.currentTime = 0;
@@ -129,7 +129,7 @@ function dbzSelect() {
   char3.alt = "piccolo";
   char4.alt = "vegeta";
   char5.alt = "beerus";
-  dbzAudio.volume = 0.75;
+  dbzAudio.volume = 0.40;
   dbzAudio.play();
   dbzAudio.addEventListener('ended', function() {
     dbzAudio.currentTime = 0;
