@@ -78,6 +78,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   margin-top: 15%;
+  mix-blend-mode:hard-light;
 }
 
 .logos {
