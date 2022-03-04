@@ -102,7 +102,7 @@ function onePieceSelect() {
 
 function dbzSelect() {
   document.body.style.backgroundImage = "url('images/backgrounds/dbz-background-effect.gif')";
-  previousBackground = "url('images/dbz-background-effect.gif')";
+  previousBackground = "url('images/backgrounds/dbz-background-effect.gif')";
   homePage.style.display = 'none';
   document.querySelector('header').style.display = 'none';
   document.querySelector('footer').style.display = 'none';
