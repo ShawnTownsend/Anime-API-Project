@@ -4,7 +4,7 @@ body {
   background-size: cover;
 }
 
-/* TESTING OUT HEADER -start */
+/* HEADER -start */
 #ball, #hat{
   width:45px;
   height:45px;
@@ -78,7 +78,7 @@ body {
     float: none;
   }
 }
-/* TESTING OUT HEADER -end */
+/* HEADER -end */
 
 #home-page {
   display: flex;
@@ -108,7 +108,7 @@ img {
 #characters-div {
   height: 100%;
   width: 20%;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-left: 100px;
 }
 .character {
@@ -118,6 +118,7 @@ img {
   background-color: rgb(224, 233, 190);
   border-radius: 50%;
   margin: 3% 0 0 15%;
+  border: 4px dashed white;
 }
 
 .character img {
@@ -146,6 +147,7 @@ img {
   width:30%;
   height:100%;
   margin-left: 100px;
+  font-family: Marker Felt;
 }
 .character-image-div {
   width:100%;
@@ -165,13 +167,12 @@ img {
   left: 500px;
   height: 120px;
 	border: 3px solid #FFCC00;
-    max-width:750px;
-    padding:10px;
-    font-family:arial;
-    margin:0 auto;
-    font-size:20px;
-    border-radius:6px;
-    
+  max-width:750px;
+  padding:10px;
+  font-family: Monaco;
+  margin:0 auto;
+  font-size:17px;
+  border-radius:6px;
 }
 #quote:after,
 #quote:before {
@@ -199,25 +200,25 @@ img {
 }
 
 a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    opacity: 0.6;
-    transition: 0.3s;
-    cursor: pointer;
-    position: absolute;
-    top: 500px;
-    left: 1000px; 
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 500px;
+  left: 1000px; 
 }
 
 a.button:hover {
@@ -225,29 +226,29 @@ a.button:hover {
 }
 
 #back-to-characters {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    opacity: 0.6;
-    transition: 0.3s;
-    cursor: pointer;
-    position: absolute;
-    top: 500px;
-    left: 1000px
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 500px;
+  left: 1000px
 }
 
 #back-to-characters.button:hover {
-    opacity: 1
+  opacity: 1
 }
 
 #link {
