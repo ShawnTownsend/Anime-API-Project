@@ -73,8 +73,8 @@ function narutoSelect() {
 }
 
 function onePieceSelect() {
-  document.body.style.backgroundImage = "url('images/backgrounds/one-piece-background.png')";
-  previousBackground = "url('images/backgrounds/one-piece-background.png')";
+  document.body.style.backgroundImage = "url('images/backgrounds/one-piece-background2.gif')";
+  previousBackground = "url('images/backgrounds/one-piece-background2.gif')";
   homePage.style.display = 'none';
   document.querySelector('header').style.display = 'none';
   document.querySelector('footer').style.display = 'none';
