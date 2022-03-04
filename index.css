@@ -42,7 +42,7 @@ body {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 22px; 
   line-height: 25px;
   border-radius: 4px;
 }
@@ -58,13 +58,8 @@ body {
 }
 
 .header a:hover {
-  background-color: #ddd;
+  background-color: rgb(255, 255, 255);
   height: 24px;
-}
-
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
 }
 
 .header-right {
@@ -267,7 +262,7 @@ a.button:hover {
 
 footer {
   background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgb(224, 13, 115));
-  position:absolute;
+  position:fixed;
   bottom:0;
   left: 0;
   width:100%;
