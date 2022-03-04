@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index.css">
-        <title>Anime Quotes API</title>
-        <link rel="icon" href="images/anime-logos/tab-icon.png">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Anime Quotes API</title>
+    <link rel="icon" href="images/anime-logos/tab-icon.png">
     <!-- HEADER -start -->
     <header class="header">
-        <a id="header-text" href="https://github.com/ShawnTownsend/Anime-API-Project" target="_blank">Quotes Hidden in the Clouds</a>
-        <div class="header-right">
-          <a href="https://en.dragon-ball-official.com/" target="_blank"><img id="ball" src="images/anime-logos/Dragon-Ball1.png"/></a>
-          <a href="https://www.viz.com/shonenjump/chapters/one-piece?locale=en" target="_blank"><img id="hat" src="images/anime-logos/one-piece-symbol.png"/></a>
-          <a href="https://www.viz.com/naruto" target="_blank"><img id="kunai" src="images/anime-logos/hidden-leaf-symbol1.png"/></a>
-        </div>
+      <a id="header-text" href="https://github.com/ShawnTownsend/Anime-API-Project" target="_blank">Quotes Hidden in the Clouds</a>
+      <div class="header-right">
+        <a href="https://en.dragon-ball-official.com/" target="_blank">
+            <img id="ball" src="images/anime-logos/Dragon-Ball1.png" alt="Dragon Ball symbol" />
+        </a>
+        <a href="https://www.viz.com/shonenjump/chapters/one-piece?locale=en" target="_blank">
+            <img id="hat" src="images/anime-logos/one-piece-symbol.png" alt="One Piece symbol" />
+        </a>
+        <a href="https://www.viz.com/naruto" target="_blank">
+            <img id="kunai" src="images/anime-logos/hidden-leaf-symbol1.png" alt="Naruto symbol" />
+        </a>
+      </div>
     </header>
     <!-- HEADER -end -->
-    </head>
-    <body>
-        <div id="home-page">
-            <div class='logos' id="dbz-logo">
-                <img id="logo-img" src="images/anime-logos/dbz-logo.png" alt="DBZ-logo"/>
-            </div>
-            <div class='logos' id="one-piece-logo">
-                <img id="logo-img" src="images/anime-logos/one-piece-logo.png" alt="One-Piece-logo"/>
-            </div>
-            <div class='logos' id="naruto-logo">
-                <img id="logo-img" src="images/anime-logos/naruto-logo.png" alt="Naruto-logo"/>
-            </div>
-            <div id="choose-anime-div">
-                <img src="images/anime-logos/homepage-text.png" alt="Choose your Anime!">
-            </div>
+  </head>
+
+  <body>
+    <div id="home-page">
+      <div class='logos' id="dbz-logo">
+        <img id="logo-img" src="images/anime-logos/dbz-logo.png" alt="DBZ-logo" />
+      </div>
+      <div class='logos' id="one-piece-logo">
+        <img id="logo-img" src="images/anime-logos/one-piece-logo.png" alt="One-Piece-logo" />
+      </div>
+      <div class='logos' id="naruto-logo">
+        <img id="logo-img" src="images/anime-logos/naruto-logo.png" alt="Naruto-logo" />
+      </div>
+      <div id="choose-anime-div">
+        <img src="images/anime-logos/homepage-text.png" alt="Choose your Anime!">
+      </div>
+    </div>
+    <div id="character-selection">
+      <div id="characters-div">
+        <div class="character">
+          <img src="" alt="" id="char1">
         </div>
-        <div id = "character-selection">
-            <div id="characters-div">
-                <div class="character">
-                    <img src="" alt="" id="char1">
-                </div>
-                <div class="character">
-                    <img src="" alt="" id="char2">
-                </div>
-                <div class="character">
-                    <img src="" alt="" id="char3">
-                </div>
-                <div class="character">
-                    <img src="" alt="" id="char4">
-                </div>
-                <div class="character">
-                    <img src="" alt="" id="char5">
-                </div>
-            </div>
-            <a href="./index.html" class="button">Back to Home</a>
+        <div class="character">
+          <img src="" alt="" id="char2">
         </div>
-        <div id = "character-quote-page">
-            <button id="back-to-characters">Go Back</button>
-            <div id="spacing">
-                
-            </div>
-            <div id ="quote-section">
-                <div id="quote-character-div">
-                    <div class="character-image-div">
-                        <img id="character-quote-image" src="" alt="">
-                    </div>
-                    <div class="character-data">
-                        <h1 id="name"></h1>
-                        <h1 id="name_kanji"></h1>
-                        <h1 id="nickname"></h1>
-                        <h4>
-                            <a href="" target="_blank" id="link"></a>
-                        </h4>
-                    </div>
-                </div>
-                <div id="quote-div">
-                    <h1 id="quote"></h1> 
-                </div>
-            </div>
+        <div class="character">
+          <img src="" alt="" id="char3">
         </div>
-        <script src="index.js"></script>
-    </body>
-    <footer>
-        Designed and Rendered by Shawn Townsend, Ray Lu, and Mohammad Islam © QHITC 2022
-    </footer id = footer style = "margin:2% 0">
+        <div class="character">
+          <img src="" alt="" id="char4">
+        </div>
+        <div class="character">
+          <img src="" alt="" id="char5">
+        </div>
+      </div>
+      <a href="./index.html" class="button">Back to Home</a>
+    </div>
+    <div id="character-quote-page">
+      <button id="back-to-characters">Go Back</button>
+      <div id="spacing">
+
+      </div>
+      <div id="quote-section">
+        <div id="quote-character-div">
+          <div class="character-image-div">
+            <img id="character-quote-image" src="" alt="">
+          </div>
+          <div class="character-data">
+            <h1 id="name"></h1>
+            <h1 id="name_kanji"></h1>
+            <h1 id="nickname"></h1>
+            <h4>
+              <a href="" target="_blank" id="link"></a>
+            </h4>
+          </div>
+        </div>
+        <div id="quote-div">
+          <h1 id="quote"></h1>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+  <footer>
+    Designed and Rendered by Shawn Townsend, Ray Lu, and Mohammad Islam © QHITC 2022
+  </footer id=footer style="margin:2% 0">
+
 </html>
