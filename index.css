@@ -257,6 +257,7 @@ a.button:hover {
 #choose-anime-div {
   position: absolute;
   top: 500px;
+  filter: drop-shadow(10px 10px 10px black);
 }
 
 footer {
