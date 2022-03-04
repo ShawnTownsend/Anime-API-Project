@@ -45,8 +45,8 @@ dbzLogo.addEventListener('mouseout', shrinkLogo);
 
 // ANIME SELECTION
 function narutoSelect() {
-  document.body.style.backgroundImage = "url('images/backgrounds/new-naruto-background-pixteller.png')";
-  previousBackground = "url('images/backgrounds/new-naruto-background-pixteller.png')";
+  document.body.style.backgroundImage = "url('images/backgrounds/naruto-background-effect.gif')";
+  previousBackground = "url('images/backgrounds/naruto-background-effect.gif')";
   homePage.style.display = 'none';
   document.querySelector('header').style.display = 'none';
   document.querySelector('footer').style.display = 'none';
