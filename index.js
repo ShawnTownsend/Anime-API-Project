@@ -23,11 +23,23 @@ const narutoAudio = new Audio('audio/Naruto-Theme.mp3');
 const onePieceAudio = new Audio('audio/One-Piece-LuffysTheme.mp3');
 let currentAnime;
 let previousBackground;
+const charName = document.getElementById('name');
+const charKanjiName = document.getElementById('name_kanji');
+const charNickName = document.getElementById('nickname');
+const charURL = document.getElementById('link');
+
 
 backToCharactersButton.onclick = () => {
   characterQuote.style.display = 'none';
   charSelect.style.display = 'block';
   document.body.style.backgroundImage = previousBackground;
+  charName.innerText = 'LOADING.........';
+  charKanjiName.innerText = 'LOADING.........';
+  charNickName.innerText = 'LOADING.........';
+  charURL.href = ''
+  charURL.innerText = 'LOADING.........';
+  charImage.src = '';
+  quotes.innerText = 'LOADING.........'
 };
 
 // ANIME SELECT
@@ -167,10 +179,6 @@ function fetchQuote(name) {
       quotes.innerText = data[randomNumber(data.length)].quote;
     });
 }
-const charName = document.getElementById('name');
-const charKanjiName = document.getElementById('name_kanji');
-const charNickName = document.getElementById('nickname');
-const charURL = document.getElementById('link');
 
 function fetchMetaData(index, array, name) {
   fetch(`https://api.jikan.moe/v4/characters/${array[index]}`)
