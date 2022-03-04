@@ -8,7 +8,7 @@ body {
 #ball, #hat{
   width:45px;
   height:45px;
-  margin-top: -11px;
+  margin-top: -8px;
   display: flex;
   justify-content: space-between;
 }
@@ -37,19 +37,14 @@ body {
 .header a {
   float: left;
   color: white;
-  font-family: copperplate;
+  font-family: georgia;
   font-weight: bold;
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 22px; 
+  font-size: 20px; 
   line-height: 25px;
   border-radius: 4px;
-}
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
 }
 
 #header-text:hover{
@@ -105,7 +100,7 @@ img {
   display:none;
 }
 #characters-div {
-  height: 100%;
+  height: 98.5%;
   width: 20%;
   margin-top: 5px;
   margin-left: 100px;
@@ -117,7 +112,7 @@ img {
   background-color: rgb(224, 233, 190);
   border-radius: 50%;
   margin: 3% 0 0 15%;
-  border: 4px dashed white;
+  border: 4px dashed black;
 }
 
 .character img {
@@ -268,6 +263,7 @@ footer {
   width:100%;
   color: white;
   text-align: center;
-  padding: 8px;
-  font-family: copperplate;
+  padding: 5px;
+  font-family: consolas;
+  font-weight: bold;
 }
